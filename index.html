@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pomodoro Timer</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1>🍅 Pomodoro Timer</h1>
+            <div class="pomodoro-explanation">
+                La technique Pomodoro est une méthode de gestion du temps qui consiste à travailler par intervalles de 25 minutes, 
+                appelés "pomodoros", séparés par de courtes pauses de 5 minutes. Après 4 pomodoros, 
+                vous prenez une pause plus longue de 30 minutes. Cette méthode améliore la concentration et la productivité.
+            </div>
+        </header>
+
+        <main class="main-content">
+            <article class="left-panel">
+                <div class="day-title">
+                    <input type="text" id="dayTitle" placeholder="Titre de la journée..." value="Ma journée productive">
+                </div>
+                
+                <div class="task-section">
+                    <h3>📋 Liste des tâches</h3>
+                    <div class="task-input">
+                        <input type="text" id="taskInput" placeholder="Ajouter une tâche...">
+                        <button onclick="addTask()">Ajouter</button>
+                    </div>
+                    <ul class="task-list" id="taskList"></ul>
+                </div>
+            </article>
+
+            <article class="right-panel">
+                <div class="timer-section">
+                    <div class="session-info">
+                        <span class="status-indicator" id="statusIndicator"></span>
+                        <span id="sessionInfo">Session 1/4 - Travail</span>
+                    </div>
+                    <div class="timer-display work" id="timerDisplay">25:00</div>
+                    <div class="controls">
+                        <button class="btn btn-primary" onclick="startTimer()" id="startBtn">Démarrer</button>
+                        <button class="btn btn-secondary" onclick="pauseTimer()" id="pauseBtn">Pause</button>
+                        <button class="btn btn-danger" onclick="resetTimer()">Reset</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <div class="fireworks" id="fireworks"></div>
+
+        <script src="js/script.js" defer></script>
+        <script src="js/tasks.js" defer></script>
+    </body>
+</html>
